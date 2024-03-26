@@ -23,7 +23,7 @@ public class StandardRabbitAckConsumer extends DefaultConsumer {
         try {
             work.doWork(new RabbitMessage(new ByteBody(body), new RabbitProperties(properties), new RabbitHeaders(properties)));
             getChannel().basicAck(envelope.getDeliveryTag(), false);
-        } catch (Throwable e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

@@ -23,7 +23,7 @@ public class ImmediatelyAckConsumer extends DefaultConsumer {
         try {
             getChannel().basicAck(envelope.getDeliveryTag(), false);
             work.doWork(new RabbitMessage(new ByteBody(body), new RabbitProperties(properties), new RabbitHeaders(properties)));
-        } catch (Throwable e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
