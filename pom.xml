@@ -6,7 +6,7 @@
 
     <groupId>com.github.volodya-lombrozo</groupId>
     <artifactId>bunny</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.0-ait</version>
     <packaging>jar</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Java library for easy work with RabbitMQ</description>
@@ -36,13 +36,6 @@
             </roles>
         </developer>
     </developers>
-
-
-    <scm>
-        <connection>scm:git:git@github.com:volodya-lombrozo/bunny.git</connection>
-        <developerConnection>scm:git:ssh://@github.com:volodya-lombrozo/bunny.git</developerConnection>
-        <url>https://github.com/volodya-lombrozo/bunny/tree/master</url>
-    </scm>
 
     <dependencies>
         <dependency>
@@ -89,23 +82,17 @@
 
     <profiles>
         <profile>
-            <id>altinntech</id>
+            <id>ait-bunny</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <distributionManagement>
                 <repository>
-                    <id>com.github.atlinntech</id>
+                    <id>ait-bunny</id>
                     <name>GitHub Altinntech Apache Maven Packages</name>
                     <url>https://maven.pkg.github.com/altinntech/bunny</url>
                 </repository>
             </distributionManagement>
-        </profile>
-        <profile>
-            <id>development</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
         </profile>
         <profile>
             <id>quality</id>
