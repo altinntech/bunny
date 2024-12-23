@@ -15,9 +15,9 @@
     <distributionManagement>
         <repository>
             <snapshots />
-            <id>nexus</id>
+            <id>nexus-server</id>
             <name>maven-snapshots</name>
-            <url>https://maven.altinntech.com/repository/maven-snapshots</url>
+            <url>https://maven.altinntech.com/repository/maven-snapshots/</url>
         </repository>
     </distributionManagement>
 
@@ -87,22 +87,4 @@
             </plugin>
         </plugins>
     </build>
-
-
-    <profiles>
-        <profile>
-            <id>nexus</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <distributionManagement>
-                <repository>
-                    <snapshots />
-                    <id>nexus</id>
-                    <name>maven-snapshots</name>
-                    <url>https://maven.altinntech.com/repository/maven-snapshots</url>
-                </repository>
-            </distributionManagement>
-        </profile>
-    </profiles>
 </project>
